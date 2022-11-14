@@ -5,3 +5,5 @@ In Syncfusion DatePickerControl provides an option to set the value to null. Dat
     // To Set DateTimePicker to null
     this.dateTimePickerAdv1.EnableNullDate = true;
     this.dateTimePickerAdv1.IsNullDate = true;
+
+![Set Null Value to DateTimePicker](DateTimePickerAdv_NullValue/Image/DateTimePicker%20Null%20Value.png)    
