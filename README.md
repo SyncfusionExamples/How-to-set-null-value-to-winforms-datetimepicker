@@ -1,12 +1,32 @@
-# How to Set a Null Value in a WinForms DateTimePicker
-This session explains how to enable and handle null values in a WinForms DateTimePicker, which by default does not support null dates. In many real‑world applications—such as forms with optional date fields—developers need a way to represent an unselected or empty date.
-The sample demonstrates practical techniques to simulate a null value by customizing the DateTimePicker’s behavior and appearance. Common approaches include using the Checked property, applying a custom format, or programmatically clearing and restoring the control’s value. These methods allow users to leave the date field empty while still maintaining full control over validation and data binding.
+# How to Set a Null Value in WinForms DateTimePickerAdv
+This sample demonstrates how to set and display a null date in the Syncfusion WinForms DateTimePickerAdv control using its built‑in null date support.
 
-## What This Session Covers
-* Understanding the default limitations of WinForms DateTimePicker
-* Using the Checked property to represent a null date
-* Applying custom formats to visually indicate an empty value
-* Handling user interactions and value changes
-* Safely reading and storing nullable date values
+Unlike the standard WinForms DateTimePicker, DateTimePickerAdv provides native properties to handle null values directly.
 
-This guidance is useful for building flexible WinForms forms where date input is optional and improves overall user experience.
+## Overview
+In many applications, date fields are optional. The Syncfusion **DateTimePickerAdv** control supports this requirement through the _EnableNullDate_ and _IsNullDate_ properties.
+
+This sample shows how to initialize the control with a **null (empty) date** when the form loads.
+
+## What This Sample Demonstrates
+- Enabling null date support in DateTimePickerAdv
+- Setting the control to a null state programmatically
+- Displaying an empty DateTimePicker without custom formatting
+- Using built‑in Syncfusion APIs instead of workarounds
+
+## Key Properties Used
+| Property Name     | Description                                              |
+|-------------------|----------------------------------------------------------|
+| `EnableNullDate`  | Enables null date support in the control.                |
+| `IsNullDate`      | Sets or gets whether the current value is null.          |
+
+##  Code Implementation
+Setting a Null Date on Form Load.
+
+```Csharp
+private void Form1_Load(object sender, EventArgs e)
+{
+    this.dateTimePickerAdv1.EnableNullDate = true;
+    this.dateTimePickerAdv1.IsNullDate = true;
+}
+```
